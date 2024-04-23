@@ -5205,13 +5205,7 @@ export const linkSpans: {
  */
 export const makeSpan: (
   name: string,
-  options?: {
-    readonly attributes?: Record<string, unknown> | undefined
-    readonly links?: ReadonlyArray<Tracer.SpanLink> | undefined
-    readonly parent?: Tracer.AnySpan | undefined
-    readonly root?: boolean | undefined
-    readonly context?: Context.Context<never> | undefined
-  }
+  options?: Tracer.SpanOptions
 ) => Effect<Tracer.Span> = effect.makeSpan
 
 /**
@@ -5226,13 +5220,7 @@ export const makeSpan: (
  */
 export const makeSpanScoped: (
   name: string,
-  options?: {
-    readonly attributes?: Record<string, unknown> | undefined
-    readonly links?: ReadonlyArray<Tracer.SpanLink> | undefined
-    readonly parent?: Tracer.AnySpan | undefined
-    readonly root?: boolean | undefined
-    readonly context?: Context.Context<never> | undefined
-  } | undefined
+  options?: Tracer.SpanOptions | undefined
 ) => Effect<Tracer.Span, never, Scope.Scope> = fiberRuntime.makeSpanScoped
 
 /**
@@ -5249,13 +5237,7 @@ export const useSpan: {
   <A, E, R>(name: string, evaluate: (span: Tracer.Span) => Effect<A, E, R>): Effect<A, E, R>
   <A, E, R>(
     name: string,
-    options: {
-      readonly attributes?: Record<string, unknown> | undefined
-      readonly links?: ReadonlyArray<Tracer.SpanLink> | undefined
-      readonly parent?: Tracer.AnySpan | undefined
-      readonly root?: boolean | undefined
-      readonly context?: Context.Context<never> | undefined
-    },
+    options: Tracer.SpanOptions,
     evaluate: (span: Tracer.Span) => Effect<A, E, R>
   ): Effect<A, E, R>
 } = effect.useSpan
@@ -5269,24 +5251,12 @@ export const useSpan: {
 export const withSpan: {
   (
     name: string,
-    options?: {
-      readonly attributes?: Record<string, unknown> | undefined
-      readonly links?: ReadonlyArray<Tracer.SpanLink> | undefined
-      readonly parent?: Tracer.AnySpan | undefined
-      readonly root?: boolean | undefined
-      readonly context?: Context.Context<never> | undefined
-    } | undefined
+    options?: Tracer.SpanOptions | undefined
   ): <A, E, R>(self: Effect<A, E, R>) => Effect<A, E, Exclude<R, Tracer.ParentSpan>>
   <A, E, R>(
     self: Effect<A, E, R>,
     name: string,
-    options?: {
-      readonly attributes?: Record<string, unknown> | undefined
-      readonly links?: ReadonlyArray<Tracer.SpanLink> | undefined
-      readonly parent?: Tracer.AnySpan | undefined
-      readonly root?: boolean | undefined
-      readonly context?: Context.Context<never> | undefined
-    } | undefined
+    options?: Tracer.SpanOptions | undefined
   ): Effect<A, E, Exclude<R, Tracer.ParentSpan>>
 } = effect.withSpan
 
@@ -5301,24 +5271,12 @@ export const withSpan: {
 export const withSpanScoped: {
   (
     name: string,
-    options?: {
-      readonly attributes?: Record<string, unknown> | undefined
-      readonly links?: ReadonlyArray<Tracer.SpanLink> | undefined
-      readonly parent?: Tracer.AnySpan | undefined
-      readonly root?: boolean | undefined
-      readonly context?: Context.Context<never> | undefined
-    }
+    options?: Tracer.SpanOptions
   ): <A, E, R>(self: Effect<A, E, R>) => Effect<A, E, Exclude<R, Tracer.ParentSpan> | Scope.Scope>
   <A, E, R>(
     self: Effect<A, E, R>,
     name: string,
-    options?: {
-      readonly attributes?: Record<string, unknown> | undefined
-      readonly links?: ReadonlyArray<Tracer.SpanLink> | undefined
-      readonly parent?: Tracer.AnySpan | undefined
-      readonly root?: boolean | undefined
-      readonly context?: Context.Context<never> | undefined
-    }
+    options?: Tracer.SpanOptions
   ): Effect<A, E, Exclude<R, Tracer.ParentSpan> | Scope.Scope>
 } = fiberRuntime.withSpanScoped
 

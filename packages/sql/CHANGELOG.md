@@ -1,5 +1,22 @@
 # @effect/sql
 
+## 0.1.11
+
+### Patch Changes
+
+- [#2621](https://github.com/Effect-TS/effect/pull/2621) [`f363af0`](https://github.com/Effect-TS/effect/commit/f363af08df9426a8bc629d80ef57d8b7e243ffa6) Thanks [@tim-smart](https://github.com/tim-smart)! - add sql transaction tracing spans
+
+- [#2609](https://github.com/Effect-TS/effect/pull/2609) [`ac1898e`](https://github.com/Effect-TS/effect/commit/ac1898eb7bc96880f911c276048e2ea3d6fe9c50) Thanks [@patroza](https://github.com/patroza)! - change: BatchedRequestResolver works with NonEmptyArray
+
+- [#2621](https://github.com/Effect-TS/effect/pull/2621) [`f363af0`](https://github.com/Effect-TS/effect/commit/f363af08df9426a8bc629d80ef57d8b7e243ffa6) Thanks [@tim-smart](https://github.com/tim-smart)! - update sql span attributes to follow semantic conventions
+
+- [#2621](https://github.com/Effect-TS/effect/pull/2621) [`f363af0`](https://github.com/Effect-TS/effect/commit/f363af08df9426a8bc629d80ef57d8b7e243ffa6) Thanks [@tim-smart](https://github.com/tim-smart)! - add sql`...`.unprepared, to run a query without trying to PREPARE it
+
+- Updated dependencies [[`ac1898e`](https://github.com/Effect-TS/effect/commit/ac1898eb7bc96880f911c276048e2ea3d6fe9c50)]:
+  - effect@3.0.6
+  - @effect/platform@0.50.6
+  - @effect/schema@0.66.9
+
 ## 0.1.10
 
 ### Patch Changes

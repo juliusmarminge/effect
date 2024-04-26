@@ -1,5 +1,16 @@
 # @effect/rpc
 
+## 0.30.11
+
+### Patch Changes
+
+- [#2609](https://github.com/Effect-TS/effect/pull/2609) [`ac1898e`](https://github.com/Effect-TS/effect/commit/ac1898eb7bc96880f911c276048e2ea3d6fe9c50) Thanks [@patroza](https://github.com/patroza)! - change: BatchedRequestResolver works with NonEmptyArray
+
+- Updated dependencies [[`ac1898e`](https://github.com/Effect-TS/effect/commit/ac1898eb7bc96880f911c276048e2ea3d6fe9c50)]:
+  - effect@3.0.6
+  - @effect/platform@0.50.6
+  - @effect/schema@0.66.9
+
 ## 0.30.10
 
 ### Patch Changes

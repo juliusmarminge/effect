@@ -1,5 +1,14 @@
 # @effect/opentelemetry
 
+## 0.33.3
+
+### Patch Changes
+
+- [#2623](https://github.com/Effect-TS/effect/pull/2623) [`8492f5b`](https://github.com/Effect-TS/effect/commit/8492f5b944459fc966807202eccc9b7802799e6f) Thanks [@tim-smart](https://github.com/tim-smart)! - allow for multiple otel span processors & metric readers
+
+- Updated dependencies [[`ac1898e`](https://github.com/Effect-TS/effect/commit/ac1898eb7bc96880f911c276048e2ea3d6fe9c50)]:
+  - effect@3.0.6
+
 ## 0.33.2
 
 ### Patch Changes
